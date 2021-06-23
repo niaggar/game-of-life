@@ -1,0 +1,7 @@
+body {
+    background: #cfcfcf;
+}
+
+#canvas-game {
+    box-sizing: border-box;
+}
