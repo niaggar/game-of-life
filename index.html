@@ -6,9 +6,59 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <canvas id="canvas-game"></canvas>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <section class="game-main">
+        <div class="game__center">
+            <canvas id="canvas-game"></canvas>
+        </div>
+
+        <div class="game__right-side">
+            <div class="btn-main-container">
+                <button class="btn-main btn-start" id="start">Start</button>
+                <button class="btn-main btn-stop" id="stop">Stop</button>
+            </div>
+
+            <form id="game-change-config">
+                <h2>Game Rules</h2>
+
+                <article class="rules">
+                    <div class="rules-container">
+                        <label for="fps">
+                            Time velocity (FPS):
+                        </label>
+                        <input required type="number" min="1" max="140" id="fps" placeholder="Default: 15">
+                    </div>
+
+                    <div class="rules-container">
+                        <label for="num-neigh-life">
+                            Number of neighbours to come to life:
+                        </label>
+                        <input required type="number" min="0" max="8" id="num-neigh-life" placeholder="Default: 3">
+                    </div>
+
+                    <div class="rules-container">
+                        <label for="num-neigh-max-die">
+                            Number max of neighbours until die:
+                        </label>
+                        <input required type="number" min="0" max="8" id="num-neigh-max-die" placeholder="Default: 4">
+                    </div>
+
+
+                    <div class="rules-container">
+                        <label for="num-neigh-min-die">
+                            Number min of neighbours until die:
+                        </label>
+                        <input required type="number" min="0" max="8" id="num-neigh-min-die" placeholder="Default: 2">
+                    </div>
+                </article>
+
+                <article class="form-submit-buttons">
+                    <button type="submit" id="btn-save">Save config</button>
+                    <button type="reset" id="btn-reset">Reset config</button>
+                </article>
+            </form>
+        </div>
+    </section>
+
     <script type="module" src="./app.js"></script>
 </body>
 </html>

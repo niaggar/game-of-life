@@ -1,7 +1,85 @@
 body {
-    background: #cfcfcf;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
-#canvas-game {
+* {
     box-sizing: border-box;
+    font-family: -apple-system, Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section.game-main {
+    max-width: 800px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btn-main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+.btn-main-container .btn-main {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    margin: 5px 0;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-main-container .btn-main:hover {
+    box-shadow: 0 0 2px 1px #2d2d2d;
+}
+
+.btn-main-container .btn-main:active {
+    background: #505050;
+}
+
+.btn-main-container .btn-start {
+    color: #fff;
+    padding: 8px;
+    font-size: 22px;
+    background: #878787;
+}
+
+.btn-main-container .btn-start:disabled {
+    background: #cecece;
+}
+
+.btn-main-container .btn-stop {
+    color: #fff;
+    background: #c1c1c1;
+}
+
+.rules-container {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.rules-container input {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1rem;
+    padding: 0.2rem;
+}
+
+.form-submit-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    height: 40px;
+}
+
+.form-submit-buttons button {
+    margin: 0;
 }
